@@ -1,0 +1,4 @@
+#Thu Feb 01 19:58:22 EET 2024
+base.0=/home/alexandru/Android-Web-App-Example/_source/app/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
