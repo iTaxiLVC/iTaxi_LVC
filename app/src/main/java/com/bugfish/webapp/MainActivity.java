@@ -1,6 +1,7 @@
 package com.bugfish.webapp;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -57,8 +58,23 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        mWebview.setWebViewClient(new WebViewClient());
+        mWebview.setWebViewClient(new WebViewClient(){
+                                      @Override
+                                      public boolean shouldOverrideUrlLoading(WebView wv, String url) {
+                                          if(url.startsWith("tel:") || url.startsWith("whatsapp:") || url.startsWith("mailto:") || url.startsWith("intent:")) {
+                                              Intent intent = new Intent(Intent.ACTION_VIEW);
+                                              intent.setData(Uri.parse(url));
+                                              startActivity(intent);
+                                              return true;
+                                          }
+                                          return false;
+                                      }
+                                  });
+
+
         mWebview .loadUrl(theUrl);
+
+
 
     }
 
