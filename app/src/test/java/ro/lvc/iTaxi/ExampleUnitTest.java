@@ -1,4 +1,4 @@
-package com.bugfish.webapp;
+package ro.lvc.iTaxi;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.bugfish.webapp;
+package ro.lvc.iTaxi;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.Intent;
