@@ -19,7 +19,7 @@ import java.net.URLDecoder;
 
 public class MainActivity extends AppCompatActivity {
     WebView mWebview    =   null;
-    String theUrl       =   "https://alexandrusemina.github.io/itaxi_web_lvc";
+    String theUrl       =   "https://itaxilvc.github.io/";
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
